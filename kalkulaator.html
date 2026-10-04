@@ -1,15 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
   <head>
 
     <title>Carnaval Trip Calculator</title>
 
+    <style>
+
+      body {
+        background-color: #e8f3df;
+        font-family: Arial, sans-serif;
+        color: #183d2b;
+        text-align: center;
+        margin: 0;
+      }
+
+      h1 {
+        background-color: #1f5c3a;
+        color: white;
+        padding: 40px;
+        margin: 0;
+      }
+
+      h2 {
+        color: #237044;
+        margin-top: 40px;
+      }
+
+      input {
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #f4a641;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #d96f32;
+      }
+
+      #vastus {
+        display: block;
+        margin-top: 25px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      a {
+        display: inline-block;
+        background-color: #237044;
+        color: white;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        margin-top: 30px;
+      }
+
+    </style>
+
     <script>
 
       function arvutus() {
-        vastus.innerText =
-          "Estimated cost: €" + (paevad.valueAsNumber * 90);
+
+        let paevad = document.getElementById("paevad").valueAsNumber;
+
+        let summa = paevad * 90;
+
+        document.getElementById("vastus").innerText =
+          "Estimated cost: €" + summa;
+
       }
 
     </script>
@@ -18,25 +85,19 @@
 
   <body>
 
-    <h1>Carnaval Trip Calculator</h1>
+    <h1>💰 Carnaval Trip Calculator 💰</h1>
 
-    How many days will you stay in Salvador?
+    <h2>How many days will you stay in Salvador?</h2>
 
-    <br />
+    <input type="number" id="paevad" min="1">
 
-    <input type="number" id="paevad" />
+    <br>
 
-    <input
-      type="button"
-      value="Calculate"
-      onclick="arvutus()"
-    />
+    <button onclick="arvutus()">Calculate</button>
 
     <span id="vastus">Your answer</span>
 
-    <br /><br />
-
-    <a href="index.html">Back to the main page</a>
+    <a href="index.html">← Back to the main page</a>
 
   </body>
 
