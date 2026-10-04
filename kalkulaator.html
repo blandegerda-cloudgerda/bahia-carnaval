@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+  <head>
+
+    <title>Carnaval Trip Calculator</title>
+
+    <script>
+
+      function arvutus() {
+        vastus.innerText =
+          "Estimated cost: €" + (paevad.valueAsNumber * 90);
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <h1>Carnaval Trip Calculator</h1>
+
+    How many days will you stay in Salvador?
+
+    <br />
+
+    <input type="number" id="paevad" />
+
+    <input
+      type="button"
+      value="Calculate"
+      onclick="arvutus()"
+    />
+
+    <span id="vastus">Your answer</span>
+
+    <br /><br />
+
+    <a href="index.html">Back to the main page</a>
+
+  </body>
+
+</html>
